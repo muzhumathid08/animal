@@ -1,0 +1,13 @@
+const colors = ["green", "blue", "red"];
+
+function randomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+const headings = document.querySelectorAll("h5");
+
+headings.forEach(function(heading) {
+    heading.addEventListener("click", function() {
+        heading.style.color = randomColor();
+    });
+});
