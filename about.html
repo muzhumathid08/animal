@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Daily Draft – About Us</title>
+
+  <!-- Task 1: Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* Task 2: Consistent colour palette across all pages */
+    :root {
+      --clr-ink:       #1c1c1e;
+      --clr-parchment: #f5f0e8;
+      --clr-accent:    #c0552a;
+      --clr-muted:     #4a6274;
+      --clr-rule:      #d4c9b4;
+    }
+    body { background-color: var(--clr-parchment); color: var(--clr-ink); font-family: 'Source Serif 4', serif; }
+    .navbar { background-color: var(--clr-ink) !important; border-bottom: 3px solid var(--clr-accent); }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--clr-parchment) !important; letter-spacing: .04em; }
+    .nav-link { color: var(--clr-rule) !important; font-size: .9rem; text-transform: uppercase; letter-spacing: .1em; }
+    .nav-link:hover, .nav-link.active { color: var(--clr-accent) !important; }
+
+    .page-header { background-color: var(--clr-ink); color: var(--clr-parchment); padding: 2.5rem 1rem; border-bottom: 4px solid var(--clr-accent); }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,4vw,3rem); }
+    .page-header p { color: var(--clr-rule); font-style: italic; margin-bottom: 0; }
+
+    .sidebar-heading { font-family: 'Playfair Display', serif; font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; color: var(--clr-accent); border-bottom: 2px solid var(--clr-rule); padding-bottom: .35rem; margin-bottom: 1rem; }
+    .sidebar-item { border-bottom: 1px solid var(--clr-rule); padding: .6rem 0; font-size: .88rem; }
+    .sidebar-item a { color: var(--clr-muted); text-decoration: none; }
+    .sidebar-item a:hover { color: var(--clr-accent); }
+
+    .section-title { font-family: 'Playfair Display', serif; color: var(--clr-accent); font-size: 1.4rem; border-bottom: 2px solid var(--clr-rule); padding-bottom: .4rem; margin-bottom: 1.2rem; }
+    .card { background: #fff; border: 1px solid var(--clr-rule); border-radius: 2px; }
+    .card-title { font-family: 'Playfair Display', serif; }
+    .team-role { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--clr-accent); }
+
+    .value-icon { font-size: 1.6rem; }
+    .value-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--clr-ink); margin-top: .4rem; }
+
+    footer { background-color: var(--clr-ink); color: var(--clr-rule); font-size: .85rem; }
+    footer a { color: var(--clr-rule); }
+    footer h6 { font-family: 'Playfair Display', serif; color: var(--clr-parchment); letter-spacing: .08em; }
+    .footer-rule { border-color: var(--clr-muted); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Daily Draft</a>
+      <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header text-center">
+    <div class="container">
+      <h1>About The Daily Draft</h1>
+      <p>Who we are, why we write, and what drives us.</p>
+    </div>
+  </header>
+
+  <!-- Main grid -->
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- Left sidebar (col-2) -->
+      <aside class="col-md-2">
+        <p class="sidebar-heading">Quick Links</p>
+        <div class="sidebar-item"><a href="index.html">Home</a></div>
+        <div class="sidebar-item"><a href="contact.html">Contact Us</a></div>
+        <div class="sidebar-item"><a href="#">Our Articles</a></div>
+        <div class="sidebar-item"><a href="#">Newsletter</a></div>
+      </aside>
+
+      <!-- Middle content (col-8) -->
+      <section class="col-md-8">
+
+        <!-- Why this project exists -->
+        <p class="section-title">Why This Project Exists</p>
+        <p class="lead" style="font-style:italic; color:var(--clr-muted);">"We believe the best way to learn is to write, share, and question everything."</p>
+        <p>The Daily Draft was born out of a shared frustration: too many great ideas get stuck in notes apps, never making it past a first draft. We created this blog as a commitment to finishing thoughts — to wrestling ideas into sentences, sentences into paragraphs, and paragraphs into something worth reading.</p>
+        <p>This project exists to give our team a real platform where we practise writing clearly, thinking critically, and collaborating openly. Every post is an opportunity to learn something, challenge an assumption, or simply tell a story that deserves to be told.</p>
+        <p>We cover technology, design, culture, and science — not because we're experts, but because curiosity doesn't need credentials. If a post makes one reader think differently about something, we've done our job.</p>
+
+        <hr style="border-color:var(--clr-rule); margin: 2rem 0;"/>
+
+        <!-- Our values -->
+        <p class="section-title">Our Values</p>
+        <div class="row g-3 mb-4">
+          <div class="col-sm-4 text-center">
+            <div class="card p-3 h-100">
+              <div class="value-icon">✍️</div>
+              <div class="value-title">Clarity</div>
+              <p style="font-size:.85rem; color:#555;">We write to be understood, not to impress.</p>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="card p-3 h-100">
+              <div class="value-icon">🔍</div>
+              <div class="value-title">Curiosity</div>
+              <p style="font-size:.85rem; color:#555;">We ask questions first and assume nothing.</p>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="card p-3 h-100">
+              <div class="value-icon">🤝</div>
+              <div class="value-title">Collaboration</div>
+              <p style="font-size:.85rem; color:#555;">Every idea is sharpened by another perspective.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <p class="section-title">Meet the Team</p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <h6 class="card-title mb-0">Alex Johnson</h6>
+              <p class="team-role">Tech & AI Writer</p>
+              <p style="font-size:.85rem; color:#555; margin-bottom:0;">Obsessed with how software shapes society. Writes about AI, developer tools, and digital ethics.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <h6 class="card-title mb-0">Maria Santos</h6>
+              <p class="team-role">Design & Culture Editor</p>
+              <p style="font-size:.85rem; color:#555; margin-bottom:0;">Believes everything is a design problem. Covers visual culture, UX trends, and creative industries.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <h6 class="card-title mb-0">David Kim</h6>
+              <p class="team-role">Science Correspondent</p>
+              <p style="font-size:.85rem; color:#555; margin-bottom:0;">Former biology student turned blogger. Translates complex science into compelling, accessible stories.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <h6 class="card-title mb-0">Priya Patel</h6>
+              <p class="team-role">Opinion & Society</p>
+              <p style="font-size:.85rem; color:#555; margin-bottom:0;">Asks uncomfortable questions about politics, media, and the way we live. Rarely wrong, never certain.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right sidebar (col-2) -->
+      <aside class="col-md-2">
+        <p class="sidebar-heading">Follow</p>
+        <div class="sidebar-item"><a href="#">Twitter / X</a></div>
+        <div class="sidebar-item"><a href="#">GitHub</a></div>
+        <div class="sidebar-item"><a href="#">RSS Feed</a></div>
+
+        <p class="sidebar-heading mt-4">Stats</p>
+        <div class="sidebar-item" style="font-size:.85rem;">📝 24 Articles</div>
+        <div class="sidebar-item" style="font-size:.85rem;">👥 4 Writers</div>
+        <div class="sidebar-item" style="font-size:.85rem;">📅 Since 2025</div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h6>The Daily Draft</h6>
+          <p class="mb-0">A student blog project exploring ideas, technology, and culture.</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p class="mb-1">📧 <a href="mailto:team@dailydraft.dev">team@dailydraft.dev</a></p>
+          <p class="mb-0">📍 Vancouver, BC, Canada</p>
+        </div>
+        <div class="col-md-4">
+          <h6>The Team</h6>
+          <ul class="list-unstyled mb-0">
+            <li>Alex Johnson</li>
+            <li>Maria Santos</li>
+            <li>David Kim</li>
+            <li>Priya Patel</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-rule mt-4"/>
+      <p class="text-center mb-0" style="font-size:.8rem;">© 2025 The Daily Draft · Built with Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

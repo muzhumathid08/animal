@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Daily Draft – Contact Us</title>
+
+  <!-- Task 1: Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* Task 2: Consistent colour palette across all pages */
+    :root {
+      --clr-ink:       #1c1c1e;
+      --clr-parchment: #f5f0e8;
+      --clr-accent:    #c0552a;
+      --clr-muted:     #4a6274;
+      --clr-rule:      #d4c9b4;
+    }
+    body { background-color: var(--clr-parchment); color: var(--clr-ink); font-family: 'Source Serif 4', serif; }
+    .navbar { background-color: var(--clr-ink) !important; border-bottom: 3px solid var(--clr-accent); }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--clr-parchment) !important; letter-spacing: .04em; }
+    .nav-link { color: var(--clr-rule) !important; font-size: .9rem; text-transform: uppercase; letter-spacing: .1em; }
+    .nav-link:hover, .nav-link.active { color: var(--clr-accent) !important; }
+
+    .page-header { background-color: var(--clr-ink); color: var(--clr-parchment); padding: 2.5rem 1rem; border-bottom: 4px solid var(--clr-accent); }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,4vw,3rem); }
+    .page-header p  { color: var(--clr-rule); font-style: italic; margin-bottom: 0; }
+
+    .sidebar-heading { font-family: 'Playfair Display', serif; font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; color: var(--clr-accent); border-bottom: 2px solid var(--clr-rule); padding-bottom: .35rem; margin-bottom: 1rem; }
+    .sidebar-item { border-bottom: 1px solid var(--clr-rule); padding: .6rem 0; font-size: .88rem; }
+    .sidebar-item a { color: var(--clr-muted); text-decoration: none; }
+    .sidebar-item a:hover { color: var(--clr-accent); }
+
+    /* Form card */
+    .form-card { background: #fff; border: 1px solid var(--clr-rule); border-radius: 2px; padding: 2rem; }
+    .section-title { font-family: 'Playfair Display', serif; color: var(--clr-accent); font-size: 1.4rem; border-bottom: 2px solid var(--clr-rule); padding-bottom: .4rem; margin-bottom: 1.2rem; }
+
+    /* Override Bootstrap form controls to match palette */
+    .form-label { font-size: .88rem; text-transform: uppercase; letter-spacing: .08em; color: var(--clr-muted); margin-bottom: .3rem; }
+    .form-control:focus { border-color: var(--clr-accent); box-shadow: 0 0 0 .2rem rgba(192,85,42,.2); }
+
+    /* Send button */
+    .btn-send { background-color: var(--clr-ink); color: var(--clr-parchment); border: none; font-family: 'Playfair Display', serif; letter-spacing: .06em; padding: .6rem 1.8rem; }
+    .btn-send:hover { background-color: var(--clr-accent); color: #fff; }
+
+    /* Alert */
+    #successAlert { display: none; }
+
+    /* Info box */
+    .info-box { background: var(--clr-ink); color: var(--clr-rule); border-left: 4px solid var(--clr-accent); padding: 1rem 1.2rem; font-size: .88rem; margin-bottom: 1rem; }
+    .info-box strong { color: var(--clr-parchment); }
+
+    footer { background-color: var(--clr-ink); color: var(--clr-rule); font-size: .85rem; }
+    footer a { color: var(--clr-rule); }
+    footer h6 { font-family: 'Playfair Display', serif; color: var(--clr-parchment); letter-spacing: .08em; }
+    .footer-rule { border-color: var(--clr-muted); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Daily Draft</a>
+      <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header text-center">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Got a story tip, a question, or just want to say hello?</p>
+    </div>
+  </header>
+
+  <!-- Main grid -->
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- Left sidebar (col-2) -->
+      <aside class="col-md-2">
+        <p class="sidebar-heading">Navigate</p>
+        <div class="sidebar-item"><a href="index.html">Home</a></div>
+        <div class="sidebar-item"><a href="about.html">About Us</a></div>
+        <div class="sidebar-item"><a href="#">Articles</a></div>
+
+        <p class="sidebar-heading mt-4">Response Time</p>
+        <p style="font-size:.82rem; color:var(--clr-muted);">We typically reply within <strong style="color:var(--clr-ink)">1–2 business days</strong>.</p>
+      </aside>
+
+      <!-- Middle content (col-8) -->
+      <section class="col-md-8">
+
+        <!-- Task 6: Live alert (dismissible) -->
+        <div id="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>✅ Message sent!</strong> Thanks for reaching out — we'll get back to you within 1–2 business days.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="form-card">
+          <p class="section-title">Send Us a Message</p>
+
+          <!-- Task 6: Working form with email + textarea + button -->
+          <div class="mb-3">
+            <label for="senderName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="senderName" placeholder="Jane Smith"/>
+          </div>
+
+          <div class="mb-3">
+            <label for="senderEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="senderEmail" placeholder="jane@example.com"/>
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Story idea, feedback, collaboration…"/>
+          </div>
+
+          <div class="mb-4">
+            <label for="messageBody" class="form-label">Message</label>
+            <textarea class="form-control" id="messageBody" rows="5" placeholder="Write your message here…"></textarea>
+          </div>
+
+          <!-- Task 6: Button triggers live alert -->
+          <button class="btn btn-send" onclick="sendMessage()">Send Message</button>
+        </div>
+
+        <hr style="border-color:var(--clr-rule); margin: 2rem 0;"/>
+
+        <!-- Extra contact info -->
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <div class="info-box">
+              <strong>Email</strong><br/>
+              team@dailydraft.dev
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="info-box">
+              <strong>Location</strong><br/>
+              Vancouver, BC, Canada
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="info-box">
+              <strong>GitHub</strong><br/>
+              github.com/dailydraft
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right sidebar (col-2) -->
+      <aside class="col-md-2">
+        <p class="sidebar-heading">FAQ</p>
+        <div class="sidebar-item" style="font-size:.82rem;"><strong>Can I contribute?</strong><br/>Yes! Email us your pitch.</div>
+        <div class="sidebar-item" style="font-size:.82rem;"><strong>Corrections?</strong><br/>We welcome all feedback.</div>
+        <div class="sidebar-item" style="font-size:.82rem;"><strong>Press enquiries?</strong><br/>Use the form or email directly.</div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h6>The Daily Draft</h6>
+          <p class="mb-0">A student blog project exploring ideas, technology, and culture.</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p class="mb-1">📧 <a href="mailto:team@dailydraft.dev">team@dailydraft.dev</a></p>
+          <p class="mb-0">📍 Vancouver, BC, Canada</p>
+        </div>
+        <div class="col-md-4">
+          <h6>The Team</h6>
+          <ul class="list-unstyled mb-0">
+            <li>Alex Johnson</li>
+            <li>Maria Santos</li>
+            <li>David Kim</li>
+            <li>Priya Patel</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-rule mt-4"/>
+      <p class="text-center mb-0" style="font-size:.8rem;">© 2025 The Daily Draft · Built with Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function sendMessage() {
+      const email   = document.getElementById('senderEmail').value.trim();
+      const message = document.getElementById('messageBody').value.trim();
+
+      if (!email || !message) {
+        alert('Please fill in at least your email address and a message before sending.');
+        return;
+      }
+
+      // Show the live dismissible alert
+      const alertEl = document.getElementById('successAlert');
+      alertEl.style.display = 'block';
+
+      // Scroll up so the user sees the alert
+      alertEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Clear the form
+      document.getElementById('senderName').value  = '';
+      document.getElementById('senderEmail').value = '';
+      document.getElementById('subject').value     = '';
+      document.getElementById('messageBody').value = '';
+    }
+  </script>
+</body>
+</html>
